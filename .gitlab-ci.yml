@@ -12,6 +12,10 @@ cypress_tests:
 
   before_script:
     - npm install
+    # ✅ garante que as pastas existam (evita erro de artifact)
+    - mkdir -p cypress/reports
+    - mkdir -p cypress/screenshots
+    - mkdir -p cypress/videos
 
   script:
     - npx cypress run --browser chrome
@@ -21,4 +25,5 @@ cypress_tests:
     paths:
       - cypress/screenshots/
       - cypress/videos/
+      - cypress/reports/
     expire_in: 7 days

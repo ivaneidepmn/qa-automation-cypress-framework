@@ -11,7 +11,7 @@ module.exports = defineConfig({
     overwrite: false,
     html: true,
     json: true,
-    charts: true
+    charts: true,
   },
 
   e2e: {
@@ -19,21 +19,21 @@ module.exports = defineConfig({
     specPattern: "cypress/e2e/**/*.feature",
 
     async setupNodeEvents(on, config) {
-      // ✅ Cucumber
-      await addCucumberPreprocessorPlugin(on, config);
-
-      // ✅ Mochawesome (plugin)
+      // ✅ Mochawesome plugin (recomendado ficar no topo)
       addMochawesomeReporterPlugin(on);
 
-      // ✅ Bundler (esbuild)
+      // ✅ Cucumber (capture o retorno do config)
+      config = await addCucumberPreprocessorPlugin(on, config);
+
+      // ✅ Bundler (esbuild) para .feature
       on(
         "file:preprocessor",
         createBundler({
-          plugins: [createEsbuildPlugin(config)]
+          plugins: [createEsbuildPlugin(config)],
         })
       );
 
       return config;
-    }
-  }
+    },
+  },
 });
