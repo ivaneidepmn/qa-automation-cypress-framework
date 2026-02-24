@@ -6,8 +6,8 @@
 // ✅ Mochawesome Reporter
 import "cypress-mochawesome-reporter/register";
 
-// ✅ Caso futuramente você crie comandos customizados
-// import "./commands";
+// ✅ Importa comandos customizados (evita erro "module not found")
+import "./commands";
 
 // ✅ Tratamento opcional para falhas não capturadas
 Cypress.on("uncaught:exception", (err, runnable) => {
