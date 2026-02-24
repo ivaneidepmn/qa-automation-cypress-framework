@@ -1,19 +1,24 @@
 class LoginPage {
-    selectors = {
-      username: '[data-test="username"]',
-      password: '[data-test="password"]',
-      loginBtn: '[data-test="login-button"]',
-    };
-  
-    visit() {
-      cy.visit("https://www.saucedemo.com/");
-    }
-  
-    login(user, pass) {
-      cy.get(this.selectors.username).type(user);
-      cy.get(this.selectors.password).type(pass);
-      cy.get(this.selectors.loginBtn).click();
-    }
+  elements = {
+    usernameInput: () => cy.get('[data-test="username"]'),
+    passwordInput: () => cy.get('[data-test="password"]'),
+    loginButton: () => cy.get('[data-test="login-button"]'),
+    title: () => cy.get('.title')
+  };
+
+  visit() {
+    cy.visit('/');
   }
-  
-  export default LoginPage;
+
+  login(username, password) {
+    this.elements.usernameInput().clear().type(username);
+    this.elements.passwordInput().clear().type(password);
+    this.elements.loginButton().click();
+  }
+
+  validateLoginSuccess() {
+    this.elements.title().should('contain', 'Products');
+  }
+}
+
+export default new LoginPage();

@@ -1,6 +1,6 @@
 import "./commands";
 
-// Evita falha por erro externo da aplicação (use com cuidado)
+// Evita falha por erro externo da aplicação
 Cypress.on("uncaught:exception", () => {
   return false;
 });
