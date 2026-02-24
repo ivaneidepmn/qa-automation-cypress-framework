@@ -32,3 +32,4 @@ cypress_tests:
       - cypress/videos/
       - cypress/reports/
     expire_in: 7 days
+
