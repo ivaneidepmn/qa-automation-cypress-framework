@@ -1,0 +1,10 @@
+{
+    "name": "qa-automation-cypress-framework",
+    "version": "1.0.0",
+    "scripts": {
+      "test": "cypress run"
+    },
+    "devDependencies": {
+      "cypress": "^13.6.0"
+    }
+  }
