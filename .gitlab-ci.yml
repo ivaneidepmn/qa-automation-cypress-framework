@@ -3,19 +3,25 @@ image: cypress/browsers:node18.12.0-chrome107
 stages:
   - test
 
+variables:
+  # Guarda o binário do Cypress dentro do projeto (mais fácil de cachear)
+  CYPRESS_CACHE_FOLDER: "$CI_PROJECT_DIR/.cache/Cypress"
+
 cache:
+  key: ${CI_COMMIT_REF_SLUG}
   paths:
     - node_modules/
+    - .cache/Cypress/
 
 cypress_tests:
   stage: test
 
   before_script:
     - npm install
-    # ✅ garante que as pastas existam (evita erro de artifact)
-    - mkdir -p cypress/reports
-    - mkdir -p cypress/screenshots
-    - mkdir -p cypress/videos
+    # baixa/garante o binário do Cypress
+    - npx cypress install
+    # evita erro de artifacts vazios
+    - mkdir -p cypress/reports cypress/screenshots cypress/videos
 
   script:
     - npx cypress run --browser chrome
