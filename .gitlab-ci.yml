@@ -3,11 +3,15 @@ image: cypress/browsers:node18.12.0-chrome107
 stages:
   - test
 
+cache:
+  paths:
+    - node_modules/
+
 cypress_tests:
   stage: test
   script:
-    - npm ci
-    - npx cypress run
+    - npm install
+    - npx cypress run --browser chrome
   artifacts:
     when: always
     paths:
