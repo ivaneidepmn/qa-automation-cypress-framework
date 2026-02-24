@@ -3,6 +3,10 @@ image: cypress/browsers:node18.12.0-chrome107
 stages:
   - test
 
+variables:
+  # guarda o binário dentro do projeto (cacheável)
+  CYPRESS_CACHE_FOLDER: "$CI_PROJECT_DIR/.cache/Cypress"
+
 cache:
   key: ${CI_COMMIT_REF_SLUG}
   paths:
@@ -14,6 +18,8 @@ cypress_tests:
 
   before_script:
     - npm ci || npm install
+    # baixa/garante o binário no cache
+    - npx cypress install
     - npx cypress verify
 
   script:
@@ -24,4 +30,5 @@ cypress_tests:
     paths:
       - cypress/screenshots/
       - cypress/videos/
+      - cypress/reports/
     expire_in: 7 days
