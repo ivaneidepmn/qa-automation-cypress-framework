@@ -1,17 +1,15 @@
 {
   "name": "qa-automation-cypress-framework",
   "version": "1.0.0",
-  "description": "Framework de automação E2E com Cypress + Cucumber (BDD) + GitLab CI",
+  "private": true,
   "scripts": {
     "test": "cypress run",
-    "test:chrome": "cypress run --browser chrome",
-    "open": "cypress open"
+    "test:chrome": "cypress run --browser chrome"
   },
   "devDependencies": {
-    "cypress": "13.6.0",
+    "cypress": "^13.6.0",
     "@badeball/cypress-cucumber-preprocessor": "^20.0.0",
     "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",
-    "esbuild": "^0.19.0",
-    "cypress-mochawesome-reporter": "^3.8.2"
+    "esbuild": "^0.19.0"
   }
 }

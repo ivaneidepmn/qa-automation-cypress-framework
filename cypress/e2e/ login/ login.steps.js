@@ -1,16 +1,14 @@
-import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
-import LoginPage from "../../pages/LoginPage";
+const { Given, When, Then } = require("@badeball/cypress-cucumber-preprocessor");
 
-const loginPage = new LoginPage();
-
-Given("I access the login page", () => {
-  loginPage.visit();
+Given("que eu acesso a página de login", () => {
+  cy.visit("/");
 });
 
-When("I login with username {string} and password {string}", (user, pass) => {
-  loginPage.login(user, pass);
+When("eu faço login com usuário {string} e senha {string}", (user, pass) => {
+  cy.login(user, pass);
 });
 
-Then("I should see the products page", () => {
+Then("devo ver a página de produtos", () => {
   cy.url().should("include", "/inventory");
+  cy.get(".title").should("contain", "Products");
 });
