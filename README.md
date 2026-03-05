@@ -3,7 +3,13 @@
 </p>
 
 <h1 align="center">
-🧪 QA Automation Cypress Framework
+# 🧪 QA Automation Cypress Framework
+
+![Cypress](https://img.shields.io/badge/Cypress-Test%20Automation-green)
+![BDD](https://img.shields.io/badge/BDD-Cucumber-blue)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow)
+![Node](https://img.shields.io/badge/Node.js-20.x-green)
+![Status](https://img.shields.io/badge/Status-Active-success)
 </h1>
 
 <p align="center">
@@ -83,16 +89,18 @@ The architecture separates responsibilities between:
 
 ---
 
-# 🛠 Tech Stack
+## 🛠 Tech Stack
 
-Main technologies used in this project:
+This framework was built using modern QA automation tools:
 
-- **Cypress**
-- **Cucumber (BDD)**
-- **JavaScript (ES6)**
-- **Node.js**
-- **Chrome Headless**
-- **Page Object Model**
+- Cypress
+- Cucumber (BDD)
+- JavaScript (ES6)
+- Node.js
+- Page Object Model (POM)
+- Git
+- GitHub
+- Chrome Headless
 
 ---
 
@@ -165,6 +173,14 @@ Carrinho
 
 ---
 
+## 🎥 Test Execution Example
+
+Example of automated test execution using Cypress.
+
+![Test Execution](assets/test-run.gif)
+
+---
+
 # 🔄 CI/CD Pipeline (Planned)
 
 This framework is structured to support CI/CD pipelines.
@@ -193,22 +209,19 @@ Planned improvements for this project:
 
 ---
 
-# 👩‍💻 Author
+## 👩‍💻 Author
 
 **Ivaneide Monteiro**
 
 QA Automation Engineer focused on:
 
-- Test automation
-- CI/CD pipelines
-- Quality culture
+- Test Automation
+- Quality Engineering
+- CI/CD Pipelines
 - Scalable testing frameworks
 
-GitHub:
-
-
+GitHub  
 https://github.com/ivaneidepmn
-
 
 ---
 
