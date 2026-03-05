@@ -1,8 +1,0 @@
-@"
-node_modules
-package-lock.json
-cypress/screenshots
-cypress/videos
-.env
-.DS_Store
-"@ | Out-File -Encoding utf8 .gitignore
