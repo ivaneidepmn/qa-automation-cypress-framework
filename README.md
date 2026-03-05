@@ -98,39 +98,34 @@ Main technologies used in this project:
 
 ## 📁 Estrutura do Projeto
 
+<details>
+  <summary><b>Clique para expandir</b></summary>
+
 ```bash
 qa-automation-cypress-framework/
-│
-├── assets/
-│   └── cypress-qa-framework-banner.png
-│
-├── cypress/
-│   ├── e2e/
-│   │   ├── login/
-│   │   │   └── login.feature
-│   │   │
-│   │   └── cart/
-│   │       └── cart.feature
-│   │
-│   ├── fixtures/
-│   │   └── example.json
-│   │
-│   └── support/
-│       ├── pages/
-│       │   ├── LoginPage.js
-│       │   └── InventoryPage.js
-│       │
-│       ├── step_definitions/
-│       │   ├── login.steps.js
-│       │   └── cart.steps.js
-│       │
-│       ├── commands.js
-│       └── e2e.js
-│
-├── .gitignore
-├── cypress.config.js
-├── package.json
-└── README.md
+├─ assets/
+│  └─ cypress-qa-framework-banner.png
+├─ cypress/
+│  ├─ e2e/
+│  │  ├─ login/
+│  │  │  └─ login.feature
+│  │  └─ cart/
+│  │     └─ cart.feature
+│  ├─ fixtures/
+│  │  └─ example.json
+│  └─ support/
+│     ├─ pages/
+│     │  ├─ LoginPage.js
+│     │  └─ InventoryPage.js
+│     ├─ step_definitions/
+│     │  ├─ login.steps.js
+│     │  └─ cart.steps.js
+│     ├─ commands.js
+│     └─ e2e.js
+├─ .gitignore
+├─ cypress.config.js
+├─ package.json
+└─ README.md
 ```
 
 # ▶️ Running Tests Locally
