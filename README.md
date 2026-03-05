@@ -2,15 +2,17 @@
   <img src="assets/cypress-qa-framework-banner.png" alt="QA Automation Cypress Framework" width="900"/>
 </p>
 
-<h1 align="center">
-# 🧪 QA Automation Cypress Framework
+<h1 align="center">🧪 QA Automation Cypress Framework</h1>
+
+<p align="center">
 
 ![Cypress](https://img.shields.io/badge/Cypress-Test%20Automation-green)
 ![BDD](https://img.shields.io/badge/BDD-Cucumber-blue)
 ![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow)
 ![Node](https://img.shields.io/badge/Node.js-20.x-green)
 ![Status](https://img.shields.io/badge/Status-Active-success)
-</h1>
+
+</p>
 
 <p align="center">
 Professional and scalable <b>QA Automation Framework</b> built with <b>Cypress</b>, using <b>BDD (Cucumber)</b> and <b>Page Object Model (POM)</b>.
@@ -26,23 +28,27 @@ Created by <b>Ivaneide Monteiro</b>
 
 This project demonstrates how to build a **production-ready QA automation framework** following industry best practices.
 
-The framework simulates a **real QA automation project**, focusing on scalability, maintainability and CI/CD integration.
+The framework simulates a **real QA automation project**, focusing on:
+
+- scalability
+- maintainability
+- CI/CD integration
 
 It includes:
 
-- ✅ End-to-End (E2E) automation
-- ✅ BDD test scenarios using Cucumber
-- ✅ Page Object Model architecture
-- ✅ Modular and scalable test structure
-- ✅ Real UI testing using SauceDemo
-- ✅ Git version control
-- ✅ CI/CD ready structure
+- ✅ End-to-End (E2E) automation  
+- ✅ BDD test scenarios using Cucumber  
+- ✅ Page Object Model architecture  
+- ✅ Modular and scalable test structure  
+- ✅ Real UI testing using SauceDemo  
+- ✅ Git version control  
+- ✅ CI/CD ready structure  
 
 ---
 
 # 🧪 Automated Test Scenarios
 
-### 🔐 Login Module
+## 🔐 Login Module
 
 The following login flows were automated:
 
@@ -52,19 +58,15 @@ The following login flows were automated:
 | Invalid password | Error message validation |
 | Locked user | System blocks login |
 
-Example:
-
 ---
 
-### 🛒 Cart Module
+## 🛒 Cart Module
 
 Cart automation validates:
 
 | Scenario | Description |
 |--------|-------------|
 | Add product to cart | User adds item to shopping cart |
-
-Example:
 
 ---
 
@@ -89,7 +91,7 @@ The architecture separates responsibilities between:
 
 ---
 
-## 🛠 Tech Stack
+# 🛠 Tech Stack
 
 This framework was built using modern QA automation tools:
 
@@ -104,32 +106,42 @@ This framework was built using modern QA automation tools:
 
 ---
 
-## 📁 Estrutura do Projeto
+# 📁 Project Structure
 
 <details>
-  <summary><b>Clique para expandir</b></summary>
+<summary><b>Click to expand</b></summary>
 
 ```bash
 qa-automation-cypress-framework/
+│
 ├─ assets/
-│  └─ cypress-qa-framework-banner.png
+│  ├─ cypress-qa-framework-banner.png
+│  └─ test-run.gif
+│
 ├─ cypress/
+│
 │  ├─ e2e/
 │  │  ├─ login/
 │  │  │  └─ login.feature
 │  │  └─ cart/
 │  │     └─ cart.feature
+│
 │  ├─ fixtures/
 │  │  └─ example.json
+│
 │  └─ support/
+│
 │     ├─ pages/
 │     │  ├─ LoginPage.js
 │     │  └─ InventoryPage.js
+│
 │     ├─ step_definitions/
 │     │  ├─ login.steps.js
 │     │  └─ cart.steps.js
+│
 │     ├─ commands.js
 │     └─ e2e.js
+│
 ├─ .gitignore
 ├─ cypress.config.js
 ├─ package.json
@@ -190,8 +202,9 @@ Next steps include:
 - GitHub Actions integration
 - Headless browser execution
 - Parallel test execution
-- Test artifacts
-- Automatic reporting
+- Test artifacts generation
+- Automatic test reports
+
 
 ---
 
@@ -225,6 +238,6 @@ https://github.com/ivaneidepmn
 
 ---
 
-# ⭐ If you like this project
+⭐ If you like this project
 
 Give it a ⭐ on GitHub to support the work!
