@@ -1,143 +1,221 @@
-# 🧪 QA Automation Cypress Framework
+<p align="center">
+  <img src="assets/cypress-qa-framework-banner.png" alt="QA Automation Cypress Framework" width="900"/>
+</p>
 
-Professional and scalable **QA Automation Framework** built with **Cypress**, applying **Page Object Model (POM)**, **BDD (Cucumber style)** and fully integrated with **GitLab CI/CD**.
+<h1 align="center">
+🧪 QA Automation Cypress Framework
+</h1>
+
+<p align="center">
+Professional and scalable <b>QA Automation Framework</b> built with <b>Cypress</b>, using <b>BDD (Cucumber)</b> and <b>Page Object Model (POM)</b>.
+</p>
+
+<p align="center">
+Created by <b>Ivaneide Monteiro</b>
+</p>
 
 ---
 
-## 🎯 Project Objective
+# 🎯 Project Objective
 
-This project demonstrates how to build a production-ready automation framework following industry best practices.
+This project demonstrates how to build a **production-ready QA automation framework** following industry best practices.
+
+The framework simulates a **real QA automation project**, focusing on scalability, maintainability and CI/CD integration.
 
 It includes:
 
-- ✅ End-to-End (E2E) test automation  
-- ✅ Page Object Model (POM) design pattern  
-- ✅ Behavior Driven Development (BDD) structure  
-- ✅ Continuous Integration with GitLab CI  
-- ✅ Headless execution for CI environments  
-- ✅ Screenshot and video artifacts generation  
-- ✅ CI pipeline optimization with Cypress binary caching  
+- ✅ End-to-End (E2E) automation
+- ✅ BDD test scenarios using Cucumber
+- ✅ Page Object Model architecture
+- ✅ Modular and scalable test structure
+- ✅ Real UI testing using SauceDemo
+- ✅ Git version control
+- ✅ CI/CD ready structure
 
 ---
 
-## 🏗 Architecture & Design Principles
+# 🧪 Automated Test Scenarios
 
-The framework was designed to ensure:
+### 🔐 Login Module
 
-- 🔹 Scalability  
-- 🔹 Maintainability  
-- 🔹 Clear separation of concerns  
-- 🔹 Reusability of page objects  
-- 🔹 Clean and readable test scenarios  
+The following login flows were automated:
 
-It follows a layered structure separating:
+| Scenario | Description |
+|--------|-------------|
+| Login success | Valid user logs into the system |
+| Invalid password | Error message validation |
+| Locked user | System blocks login |
 
-- Test specifications  
-- Page objects  
-- Step definitions  
-- Configuration  
-- CI pipeline  
+Example:
 
 ---
 
-## 🛠 Tech Stack
+### 🛒 Cart Module
 
-- Cypress
-- JavaScript (ES6)
-- Node.js
-- GitLab CI/CD
-- Chrome Headless
-- Cucumber (BDD style)
+Cart automation validates:
+
+| Scenario | Description |
+|--------|-------------|
+| Add product to cart | User adds item to shopping cart |
+
+Example:
 
 ---
 
-## 📂 Project Structure
+# 🏗 Architecture & Design Principles
 
-```bash
-qa-automation-cypress-framework/
+This framework was designed to ensure:
+
+- 🔹 Scalability
+- 🔹 Maintainability
+- 🔹 Clean architecture
+- 🔹 Separation of concerns
+- 🔹 Reusable Page Objects
+- 🔹 Readable BDD scenarios
+
+The architecture separates responsibilities between:
+
+- Test scenarios
+- Step definitions
+- Page objects
+- Configuration
+- Support commands
+
+---
+
+# 🛠 Tech Stack
+
+Main technologies used in this project:
+
+- **Cypress**
+- **Cucumber (BDD)**
+- **JavaScript (ES6)**
+- **Node.js**
+- **Chrome Headless**
+- **Page Object Model**
+
+---
+
+# 📂 Project Structure
+
+Current structure after today's improvements:
+qa-automation-cypress-framework
 │
-├── cypress/
-│   ├── e2e/                # Test specifications
-│   ├── pages/              # Page Object classes
-│   ├── step_definitions/   # BDD step implementations
-│   ├── fixtures/           # Test data
-│   └── support/            # Custom commands & hooks
+├── assets
+│ └── cypress-qa-framework-banner.png
 │
-├── .gitlab-ci.yml          # CI pipeline configuration
-├── cypress.config.js       # Cypress configuration
+├── cypress
+│ │
+│ ├── e2e
+│ │ ├── login
+│ │ │ └── login.feature
+│ │ │
+│ │ └── cart
+│ │ └── cart.feature
+│ │
+│ ├── support
+│ │ ├── pages
+│ │ │ ├── LoginPage.js
+│ │ │ └── InventoryPage.js
+│ │ │
+│ │ ├── step_definitions
+│ │ │ ├── login.steps.js
+│ │ │ └── cart.steps.js
+│ │ │
+│ │ ├── commands.js
+│ │ └── e2e.js
+│
+├── cypress.config.js
 ├── package.json
+├── .gitignore
 └── README.md
-```
 
 ---
 
-## 🔄 CI/CD Pipeline
+# ▶️ Running Tests Locally
 
-This project is fully integrated with **GitLab CI/CD**.
+### Install dependencies
 
-The pipeline runs automatically on every push to the `main` branch.
+--- npm install
 
-### Pipeline Stages:
+### Run Cypress UI
 
-- Install dependencies  
-- Cache Cypress binary  
-- Run tests in headless mode  
-- Generate artifacts (screenshots & videos)  
+--- npx cypress open
 
-Current status:
+### Run tests in headless mode
 
-✔️ Pipeline passing  
-✔️ Automated execution on every commit  
+---npx cypress run
 
----
+### Run specific test
 
-## ▶️ How to Run Locally
+Example:
+npx cypress run --spec "cypress/e2e/login/login.feature"
+or
 
-### 1️⃣ Install dependencies
+---npx cypress run --spec "cypress/e2e/cart/cart.feature"
 
-```bash
-npm install
-```
+# 📊 Example Test Result
 
-### 2️⃣ Open Cypress UI
+Example execution result:
+✔ Login com sucesso
+✔ Login com senha inválida
+✔ Login com usuário bloqueado
+3 passing (5s)
 
-```bash
-npx cypress open
-```
+Carrinho
+✔ Adicionar produto ao carrinho
 
-### 3️⃣ Run tests headless
-
-```bash
-npx cypress run
-```
+1 passing (4s)
 
 ---
 
-## 📊 Test Strategy
+# 🔄 CI/CD Pipeline (Planned)
 
-This framework follows:
+This framework is structured to support CI/CD pipelines.
 
-- E2E validation for critical user flows  
-- Reusable Page Object components  
-- BDD scenarios for readability  
-- CI integration for early defect detection  
+Next steps include:
 
-The goal is to simulate a real-world QA automation environment.
-
----
-
-## 🚀 Future Improvements
-
-- Multi-environment configuration (.env support)  
-- Parallel test execution  
-- Test reporting dashboard integration  
-- Performance testing integration  
-- API testing module integration  
+- GitHub Actions integration
+- Headless browser execution
+- Parallel test execution
+- Test artifacts
+- Automatic reporting
 
 ---
 
-## 👩‍💻 Author
+# 🚀 Future Improvements
 
-Ivaneide Monteiro  
-QA Automation Engineer  
-Focused on quality culture, CI/CD and scalable automation solutions.
+Planned improvements for this project:
+
+- API testing integration
+- Parallel execution
+- Test reporting dashboard
+- Multi-environment configuration
+- Test data management
+- Visual testing
+- Performance testing
+
+---
+
+# 👩‍💻 Author
+
+**Ivaneide Monteiro**
+
+QA Automation Engineer focused on:
+
+- Test automation
+- CI/CD pipelines
+- Quality culture
+- Scalable testing frameworks
+
+GitHub:
+
+
+https://github.com/ivaneidepmn
+
+
+---
+
+# ⭐ If you like this project
+
+Give it a ⭐ on GitHub to support the work!
