@@ -1,3 +1,4 @@
+![Cypress Tests](https://github.com/ivaneidepmn/qa-automation-cypress-framework/actions/workflows/cypress-tests.yml/badge.svg)
 <p align="center">
   <img src="assets/cypress-qa-framework-banner.png" alt="QA Automation Cypress Framework" width="900"/>
 </p>
