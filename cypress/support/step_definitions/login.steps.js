@@ -1,22 +1,21 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
+import LoginPage from "../pages/LoginPage";
 
 Given("que eu acesso a página de login", () => {
-  cy.visit("/");
+  LoginPage.visit();
 });
 
 When(
-  'eu faço login com usuário {string} e senha {string}',
+  "eu faço login com usuário {string} e senha {string}",
   (usuario, senha) => {
-    cy.get('[data-test="username"]').type(usuario);
-    cy.get('[data-test="password"]').type(senha);
-    cy.get('[data-test="login-button"]').click();
+    LoginPage.login(usuario, senha);
   }
 );
 
 Then("devo ver a página de produtos", () => {
-  cy.url().should("include", "/inventory.html");
-  cy.contains("Products").should("be.visible");
+  LoginPage.shouldSeeProductsPage();
 });
+
 Then("devo ver uma mensagem de erro no login", () => {
-  cy.get('[data-test="error"]').should("be.visible");
+  LoginPage.shouldSeeLoginError();
 });
