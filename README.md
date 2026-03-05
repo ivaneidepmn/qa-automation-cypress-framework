@@ -96,41 +96,42 @@ Main technologies used in this project:
 
 ---
 
-# 📂 Project Structure
+## 📁 Estrutura do Projeto
 
-Current structure after today's improvements:
-qa-automation-cypress-framework
+```bash
+qa-automation-cypress-framework/
 │
-├── assets
-│ └── cypress-qa-framework-banner.png
+├── assets/
+│   └── cypress-qa-framework-banner.png
 │
-├── cypress
-│ │
-│ ├── e2e
-│ │ ├── login
-│ │ │ └── login.feature
-│ │ │
-│ │ └── cart
-│ │ └── cart.feature
-│ │
-│ ├── support
-│ │ ├── pages
-│ │ │ ├── LoginPage.js
-│ │ │ └── InventoryPage.js
-│ │ │
-│ │ ├── step_definitions
-│ │ │ ├── login.steps.js
-│ │ │ └── cart.steps.js
-│ │ │
-│ │ ├── commands.js
-│ │ └── e2e.js
+├── cypress/
+│   ├── e2e/
+│   │   ├── login/
+│   │   │   └── login.feature
+│   │   │
+│   │   └── cart/
+│   │       └── cart.feature
+│   │
+│   ├── fixtures/
+│   │   └── example.json
+│   │
+│   └── support/
+│       ├── pages/
+│       │   ├── LoginPage.js
+│       │   └── InventoryPage.js
+│       │
+│       ├── step_definitions/
+│       │   ├── login.steps.js
+│       │   └── cart.steps.js
+│       │
+│       ├── commands.js
+│       └── e2e.js
 │
+├── .gitignore
 ├── cypress.config.js
 ├── package.json
-├── .gitignore
 └── README.md
-
----
+```
 
 # ▶️ Running Tests Locally
 
