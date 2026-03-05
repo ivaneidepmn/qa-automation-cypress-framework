@@ -1,15 +1,21 @@
 {
   "name": "qa-automation-cypress-framework",
   "version": "1.0.0",
+  "description": "Framework de automação de testes E2E com Cypress e Cucumber (BDD)",
   "private": true,
   "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
     "test": "cypress run",
-    "test:chrome": "cypress run --browser chrome"
+    "test:chrome": "cypress run --browser chrome",
+    "test:headed": "cypress run --headed",
+    "test:smoke": "cypress run --env TAGS=@smoke",
+    "test:regression": "cypress run --env TAGS=@regression"
   },
   "devDependencies": {
-    "cypress": "^13.6.0",
     "@badeball/cypress-cucumber-preprocessor": "^20.0.0",
     "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",
+    "cypress": "^13.6.0",
     "esbuild": "^0.19.0"
   }
 }
