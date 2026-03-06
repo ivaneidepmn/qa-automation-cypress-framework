@@ -4,14 +4,14 @@
   "description": "Framework de automação de testes E2E com Cypress e Cucumber (BDD)",
   "private": true,
   "scripts": {
-    "cy:open": "cypress open",
-    "cy:run": "cypress run",
-    "test": "cypress run",
-    "test:chrome": "cypress run --browser chrome",
-    "test:headed": "cypress run --headed",
-    "test:smoke": "cypress run --env TAGS=@smoke",
-    "test:regression": "cypress run --env TAGS=@regression"
-  },
+  "cy:open": "cypress open",
+  "cy:run": "cypress run --browser chrome",
+  "test": "cypress run --browser chrome",
+  "test:chrome": "cypress run --browser chrome",
+  "test:headed": "cypress run --headed --browser chrome",
+  "test:smoke": "cypress run --browser chrome --env TAGS='@smoke'",
+  "test:regression": "cypress run --browser chrome --env TAGS='@regression'"
+},
   "devDependencies": {
     "@badeball/cypress-cucumber-preprocessor": "^20.0.0",
     "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",

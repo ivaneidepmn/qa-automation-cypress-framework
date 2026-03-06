@@ -13,6 +13,12 @@ module.exports = defineConfig({
     baseUrl: "https://www.saucedemo.com",
     specPattern: "cypress/e2e/**/*.feature",
 
+    testIsolation: true,
+    retries: {
+      runMode: 2,
+      openMode: 0,
+    },
+    
     // ✅ Ajustes para reduzir falhas por instabilidade de carregamento
     pageLoadTimeout: 120000,        // espera até 120s pelo evento "load"
     defaultCommandTimeout: 10000,   // comandos (get/type/click) até 10s
