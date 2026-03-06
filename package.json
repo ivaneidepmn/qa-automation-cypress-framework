@@ -10,10 +10,14 @@
   "test:chrome": "cypress run --browser chrome",
   "test:headed": "cypress run --headed --browser chrome",
   "test:smoke": "cypress run --browser chrome --env TAGS='@smoke'",
-  "test:regression": "cypress run --browser chrome --env TAGS='@regression'"
-},
+  "test:regression": "cypress run --browser chrome --env TAGS='@regression'",
+  "test:login": "cypress run --browser chrome --env TAGS='@login'",
+  "test:cart": "cypress run --browser chrome --env TAGS='@cart'"
+  },
+  
   "devDependencies": {
     "@badeball/cypress-cucumber-preprocessor": "^20.0.0",
+    "@bahmutov/cy-grep": "^2.1.0",
     "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",
     "cypress": "^13.6.0",
     "esbuild": "^0.19.0"

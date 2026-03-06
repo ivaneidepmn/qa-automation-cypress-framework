@@ -1,5 +1,6 @@
 Feature: Carrinho
 
+  @smoke @cart
   Scenario: Adicionar produto ao carrinho
     Given que estou logado na aplicação
     When adiciono um produto ao carrinho

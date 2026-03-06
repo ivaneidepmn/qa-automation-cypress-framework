@@ -1,6 +1,6 @@
 Feature: Login bloqueado
 
-  @regression
+  @regression @login
   Scenario: Login com usuário bloqueado
     Given que eu acesso a página de login
     When eu faço login com usuário "locked_out_user" e senha "secret_sauce"
