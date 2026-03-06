@@ -5,6 +5,9 @@
 <p align="center">
   <img src="assets/cypress-qa-framework-banner.png" alt="QA Automation Cypress Framework" width="900"/>
 </p>
+<p align="center">
+End-to-End QA Automation Framework designed with modern testing architecture.
+</p>
 
 <p align="center">
 
@@ -77,9 +80,8 @@ Scenario: Login success
   Given que eu acesso a página de login
   When eu faço login com usuário "standard_user" e senha "secret_sauce"
   Then devo ver a página de produtos
-```
-  ---
 
+```
 # 🛠 Tech Stack
 
 Cypress
@@ -101,6 +103,19 @@ GitHub Actions (CI/CD)
 Chrome Headless
 
 Mochawesome Reporting
+
+```markdown
+## 🧪 Test Automation Scope
+
+This framework automates real user workflows including:
+
+- Authentication flows
+- Error validation scenarios
+- Shopping cart interactions
+- UI behavior validation
+- Business critical flows
+
+The automation focuses on end-to-end validation using Cypress.
 
 # 📈 Test Strategy
 
@@ -168,7 +183,7 @@ Automated Test Reporting
 
 Test reports are generated using Mochawesome, producing HTML and JSON files.
 
-# 📊 Skills Demonstrated
+# 📊 QA Engineering Skills Demonstrated
 
 This project demonstrates important QA engineering capabilities:
 
@@ -206,7 +221,7 @@ error handling
 
 cart interactions
 
-# 💼 Business Value of This Project
+# 💼 Business Impact of Test Automation
 
 This framework demonstrates how QA automation can deliver measurable value to software teams.
 
@@ -234,7 +249,7 @@ Transparent Test Results
 
 Mochawesome reports provide clear test execution results.
 
-# 🔄 CI/CD Pipeline
+# 🔄 CI/CD Pipeline with GitHub Actions
 
 This project uses GitHub Actions to run tests automatically.
 
@@ -251,6 +266,7 @@ Mochawesome report artifacts
 CI status badge
 
 # 📁 Project Structure
+
 <details> <summary><b>Click to expand</b></summary>
 qa-automation-cypress-framework/
 
@@ -291,6 +307,7 @@ qa-automation-cypress-framework/
 └─ README.md
 </details>
 
+---
 # ▶️ Running Tests Locally
 
 Install dependencies
