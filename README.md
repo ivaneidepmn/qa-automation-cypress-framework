@@ -1,33 +1,30 @@
-````markdown
 # 🧪 QA Automation Cypress Framework
 
-![Cypress Tests](https://github.com/ivaneidepmn/qa-automation-cypress-framework/actions/workflows/cypress-tests.yml/badge.svg)
+[![Cypress Tests](https://github.com/ivaneidepmn/qa-automation-cypress-framework/actions/workflows/cypress-tests.yml/badge.svg)](https://github.com/ivaneidepmn/qa-automation-cypress-framework/actions/workflows/cypress-tests.yml)
 
 <p align="center">
-  <img src="assets/cypress-qa-framework-banner.png" alt="QA Automation Cypress Framework" width="900"/>
+  <img src="./assets/cypress-qa-framework-banner.png" alt="QA Automation Cypress Framework Banner" width="900">
 </p>
 
 <p align="center">
-End-to-End QA Automation Framework designed with modern testing architecture.
+  End-to-End QA Automation Framework designed with modern testing architecture.
 </p>
 
 <p align="center">
-
-![Cypress](https://img.shields.io/badge/Cypress-Test%20Automation-green)
-![BDD](https://img.shields.io/badge/BDD-Cucumber-blue)
-![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow)
-![Node](https://img.shields.io/badge/Node.js-20.x-green)
-![CI/CD](https://img.shields.io/badge/CI/CD-GitHub%20Actions-orange)
-![Status](https://img.shields.io/badge/Status-Active-success)
-
+  <img src="https://img.shields.io/badge/Cypress-Test%20Automation-green" alt="Cypress">
+  <img src="https://img.shields.io/badge/BDD-Cucumber-blue" alt="BDD">
+  <img src="https://img.shields.io/badge/JavaScript-ES6-yellow" alt="JavaScript">
+  <img src="https://img.shields.io/badge/Node.js-20.x-green" alt="Node.js">
+  <img src="https://img.shields.io/badge/CI/CD-GitHub%20Actions-orange" alt="CI/CD">
+  <img src="https://img.shields.io/badge/Status-Active-success" alt="Status">
 </p>
 
 <p align="center">
-Professional and scalable <b>QA Automation Framework</b> built with <b>Cypress</b>, using <b>BDD (Cucumber)</b> and <b>Page Object Model (POM)</b>.
+  <strong>Professional and scalable QA Automation Framework</strong> built with <strong>Cypress</strong>, using <strong>BDD (Cucumber)</strong> and <strong>Page Object Model (POM)</strong>.
 </p>
 
 <p align="center">
-Created by <b>Ivaneide Monteiro</b>
+  Created by <strong>Ivaneide Monteiro</strong>
 </p>
 
 ---
