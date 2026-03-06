@@ -1,4 +1,3 @@
-````markdown
 # 🧪 QA Automation Cypress Framework
 
 ![Cypress Tests](https://github.com/ivaneidepmn/qa-automation-cypress-framework/actions/workflows/cypress-tests.yml/badge.svg)
@@ -32,11 +31,13 @@ Created by <b>Ivaneide Monteiro</b>
 
 This project demonstrates how to build a **production-ready QA automation framework** following industry best practices.
 
-- scalability
-- maintainability
-- CI/CD integration
+Main goals:
 
-It includes:
+- scalability  
+- maintainability  
+- CI/CD integration  
+
+The framework includes:
 
 ✅ End-to-End (E2E) automation  
 ✅ BDD test scenarios using Cucumber  
@@ -64,9 +65,9 @@ It includes:
 
 ---
 
-## 🧾 Example BDD Scenario
+# 🧾 Example BDD Scenario
 
-Example of a real automated scenario written using **Cucumber BDD syntax**.
+Example of an automated test scenario written using **Cucumber syntax**.
 
 ```gherkin
 Feature: Login
@@ -76,137 +77,181 @@ Scenario: Login success
   Given que eu acesso a página de login
   When eu faço login com usuário "standard_user" e senha "secret_sauce"
   Then devo ver a página de produtos
-````
-
----
-
-# 🧩 Page Object Example
-
-This framework uses the **Page Object Model (POM)** pattern to keep tests clean and maintainable.
-
-Example of a simplified Page Object:
-
-```javascript
-class LoginPage {
-
-  selectors = {
-    username: '[data-test="username"]',
-    password: '[data-test="password"]',
-    loginButton: '[data-test="login-button"]'
-  }
-
-  login(user, password){
-    cy.get(this.selectors.username).type(user)
-    cy.get(this.selectors.password).type(password)
-    cy.get(this.selectors.loginButton).click()
-  }
-
-}
-
-export default new LoginPage()
 ```
-
----
+  ---
 
 # 🛠 Tech Stack
 
-* Cypress
-* Cucumber (BDD)
-* JavaScript (ES6)
-* Node.js
-* Page Object Model (POM)
-* Git
-* GitHub
-* GitHub Actions (CI/CD)
-* Chrome Headless
-* Mochawesome Reporting
+Cypress
 
----
+Cucumber (BDD)
 
-## 📈 Test Strategy
+JavaScript (ES6)
 
-This project uses a test strategy based on layered test execution.
+Node.js
 
-The objective is to ensure fast feedback for critical flows while maintaining broader regression coverage.
+Page Object Model (POM)
 
-The strategy includes:
+Git
 
-* **Smoke tests** for critical application flows
-* **Regression tests** for broader validation scenarios
-* **CI execution** with automated reporting
-* **Tag-based execution** for flexible pipeline runs
+GitHub
 
-This approach allows teams to scale automation while keeping execution time optimized.
+GitHub Actions (CI/CD)
 
----
+Chrome Headless
 
-## 🧠 QA Engineering Decisions
+Mochawesome Reporting
 
-This framework was designed following real-world QA engineering practices.
+# 📈 Test Strategy
 
-Several architectural decisions were made to ensure scalability, maintainability and reliable test execution.
+This project uses a layered test execution strategy.
 
-### BDD with Cucumber
+The goal is to provide fast feedback for critical flows while maintaining broader regression coverage.
 
-Behavior Driven Development (BDD) was adopted to make test scenarios easier to read and understand for both technical and non-technical stakeholders.
+Strategy components:
+
+Smoke tests → critical flows
+
+Regression tests → extended validation
+
+CI execution → automated test runs
+
+Tag-based execution → flexible pipeline execution
+
+This approach helps teams scale automation while keeping execution time optimized.
+
+# 🧠 QA Engineering Decisions
+
+This framework was designed using real-world QA engineering practices.
+
+BDD with Cucumber
+
+BDD was adopted to make test scenarios easier to understand for both technical and non-technical stakeholders.
 
 Feature files describe system behavior while step definitions implement the automation logic.
 
-### Page Object Model (POM)
+Page Object Model (POM)
 
-The Page Object Model pattern was implemented to separate:
+The POM pattern separates:
 
-* UI selectors
-* Page actions
-* Test assertions
+UI selectors
+
+Page actions
+
+Test assertions
 
 This improves maintainability and reduces test duplication.
 
-### Tag-Based Test Execution
+Tag-Based Test Execution
 
-Tests are organized using tags to allow selective execution:
+Tests are organized using tags:
 
-* **@smoke** → Critical flows
-* **@regression** → Extended validation scenarios
+@smoke → Critical flows
 
-This allows CI pipelines to run fast smoke tests while still enabling full regression coverage.
+@regression → Extended scenarios
 
-### CI/CD Automation
+This allows CI pipelines to run faster smoke tests while keeping full regression coverage available.
 
-GitHub Actions was integrated to run automated tests on every code change.
+CI/CD Automation
 
-The pipeline provides:
+GitHub Actions automatically runs tests on every change.
 
-* Continuous feedback
-* Early defect detection
-* Automated reporting
+Benefits:
 
-### Automated Test Reporting
+continuous feedback
 
-Test results are generated using **Mochawesome**, producing HTML and JSON reports that can be used for analysis and documentation.
+early defect detection
 
----
+automated reporting
 
-## 🔄 CI/CD Pipeline
+Automated Test Reporting
+
+Test reports are generated using Mochawesome, producing HTML and JSON files.
+
+# 📊 Skills Demonstrated
+
+This project demonstrates important QA engineering capabilities:
+
+Test Automation Engineering
+
+Design and implementation of an automation framework using Cypress.
+
+Test Strategy Definition
+
+Implementation of smoke and regression test layers.
+
+Automation Architecture
+
+Use of Page Object Model to create reusable automation components.
+
+Behavior Driven Development
+
+BDD adoption using Cucumber syntax.
+
+CI/CD Integration
+
+Automated test execution using GitHub Actions.
+
+Test Reporting
+
+Automated reporting with Mochawesome.
+
+Real User Flow Validation
+
+Automated validation of real application flows such as:
+
+login
+
+error handling
+
+cart interactions
+
+# 💼 Business Value of This Project
+
+This framework demonstrates how QA automation can deliver measurable value to software teams.
+
+Faster Feedback
+
+CI pipelines provide immediate feedback when code changes introduce defects.
+
+Reduced Production Bugs
+
+Critical flows are protected by automated smoke tests.
+
+Improved Release Confidence
+
+Regression tests validate system behavior before releases.
+
+Scalable Automation
+
+POM architecture allows easy expansion of test coverage.
+
+Standardized QA Process
+
+Combining BDD + CI/CD + tagging creates a structured quality process.
+
+Transparent Test Results
+
+Mochawesome reports provide clear test execution results.
+
+# 🔄 CI/CD Pipeline
 
 This project uses GitHub Actions to run tests automatically.
 
-### Pipeline features
+Pipeline features:
 
-Push to main → runs smoke tests
-Pull Request → runs regression tests
-Uploads Mochawesome report as artifact
-Headless browser execution
-CI test status badge
+Push to main → smoke tests
 
----
+Pull Requests → regression tests
 
-## 📁 Project Structure
+Headless Chrome execution
 
-<details>
-<summary><b>Click to expand</b></summary>
+Mochawesome report artifacts
 
-```bash
+CI status badge
+
+# 📁 Project Structure
+<details> <summary><b>Click to expand</b></summary>
 qa-automation-cypress-framework/
 
 ├─ assets/
@@ -220,15 +265,19 @@ qa-automation-cypress-framework/
 │  │  │  └─ login-locked.feature
 │  │  └─ cart/
 │  │     └─ cart.feature
+│
 │  ├─ fixtures/
 │  │  └─ example.json
+│
 │  └─ support/
 │     ├─ pages/
 │     │  ├─ LoginPage.js
 │     │  └─ InventoryPage.js
+│
 │     ├─ step_definitions/
 │     │  ├─ login.steps.js
 │     │  └─ cart.steps.js
+│
 │     ├─ commands.js
 │     └─ e2e.js
 
@@ -240,72 +289,55 @@ qa-automation-cypress-framework/
 ├─ cypress.config.js
 ├─ package.json
 └─ README.md
-```
-
 </details>
 
----
-
-## ▶️ Running Tests Locally
+# ▶️ Running Tests Locally
 
 Install dependencies
 
-```bash
 npm install
-```
 
 Open Cypress UI
 
-```bash
 npx cypress open
-```
 
 Run all tests
 
-```bash
 npx cypress run --browser chrome
-```
 
 Run a specific test
 
-```bash
 npx cypress run --spec "cypress/e2e/login/login.feature"
-```
 
 or
 
-```bash
 npx cypress run --spec "cypress/e2e/cart/cart.feature"
-```
 
----
+# 🚀 Future Improvements
 
-## 🚀 Future improvements planned
+Planned improvements:
 
-* Parallel test execution
-* API testing integration
-* Multi-environment configuration
-* Visual regression testing
+Parallel test execution
 
----
+API test automation
 
-## 👩‍💻 Author
+Multi-environment configuration
+
+Visual regression testing
+
+# ##👩‍💻 Author
 
 Ivaneide Monteiro
 
 QA Automation Engineer focused on:
 
-* Test Automation
-* Quality Engineering
-* CI/CD Pipelines
+Test Automation
 
----
+Quality Engineering
 
-### GitHub
+CI/CD Pipelines
 
-[https://github.com/ivaneidepmn](https://github.com/ivaneidepmn)
+GitHub
+https://github.com/ivaneidepmn
 
-⭐ If you like this project
-Give it a ⭐ on GitHub to support the work!
-
-````
+⭐ If you like this project, give it a star on GitHub.
