@@ -8,36 +8,14 @@ class LoginPage {
   };
 
   visit() {
-    cy.url({ log: false }).then((url) => {
-      const isInventoryPage = url.includes("/inventory.html");
-      const isLoginPage =
-        url.includes("saucedemo.com") && !url.includes("/inventory.html");
+    cy.get("body", { log: false }).then(($body) => {
+      const hasUsernameField = $body.find('[data-test="username"]').length > 0;
 
-      // Se estiver na inventory, volta para a login
-      if (isInventoryPage) {
-        cy.clearCookies();
-        cy.clearLocalStorage();
-
-        cy.visit("/", {
-          timeout: 120000,
-          failOnStatusCode: false,
-        });
-
-        cy.get(this.selectors.username, { timeout: 20000 }).should("be.visible");
-        return;
-      }
-
-      // Se já estiver na tela de login, não visita de novo
-      if (isLoginPage) {
-        cy.get(this.selectors.username, { timeout: 20000 }).should("be.visible");
+      if (hasUsernameField) {
         cy.get(this.selectors.username).clear();
         cy.get(this.selectors.password).clear();
         return;
       }
-
-      // Caso inicial / about:blank / qualquer outro estado
-      cy.clearCookies();
-      cy.clearLocalStorage();
 
       cy.visit("/", {
         timeout: 120000,
