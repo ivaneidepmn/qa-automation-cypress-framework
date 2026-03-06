@@ -85,13 +85,20 @@ Scenario: Login success
 
 # 🎥 Test Execution Example
 
-Below is an example of Cypress automated tests running.
+Below is an example of automated tests running with Cypress.
 
 <p align="center">
-  <img src="assets/test-run.gif" width="800"/>
+  <img src="assets/test-run.gif" alt="Cypress Test Execution" width="850"/>
 </p>
 
-The tests are executed automatically through CI pipelines and locally by developers and QA engineers.
+The tests are executed automatically through **CI pipelines** and can also be run locally by developers and QA engineers.
+
+This execution demonstrates the validation of critical user flows such as:
+
+- Login authentication
+- Error handling scenarios
+- Product interaction
+- Shopping cart validation
 
 ---
 
