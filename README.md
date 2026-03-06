@@ -76,6 +76,7 @@ Scenario: Login success
   When eu faço login com usuário "standard_user" e senha "secret_sauce"
   Then devo ver a página de produtos
 
+
 ---
 
 ## 🧩 Page Object Example
@@ -84,8 +85,7 @@ This framework uses the **Page Object Model (POM)** pattern to keep tests clean 
 
 Example of a simplified Page Object:
 
-```
-javascript
+```javascript
 class LoginPage {
 
   selectors = {
@@ -104,6 +104,7 @@ class LoginPage {
 
 export default new LoginPage()
 
+---
 
 # 🛠 Tech Stack
 
@@ -185,7 +186,7 @@ Test results are generated using **Mochawesome**, producing HTML and JSON report
 
 ---
 
-## 📊 What This Project Demonstrates
+## 📊 Skills Demonstrated
 
 This project demonstrates several important QA engineering skills and practices used in modern software development environments.
 
@@ -257,30 +258,11 @@ Automated reporting with **Mochawesome** allows teams to quickly understand test
 
 ---
 
-
-# ⚙️ Test Execution Strategy
-
-## Smoke Tests
-
-```bash
-npx cypress run --browser chrome --env TAGS='@smoke'
-## Regression Tests
-
-```bash
-npx cypress run --browser chrome --env TAGS='@regression'
-📊 Test Reporting
-
-The framework generates automated reports using Mochawesome.
-
-Generated files:
-
-cypress/reports/mochawesome.html
-cypress/reports/mochawesome.json
-🔄 CI/CD Pipeline
+## 🔄 CI/CD Pipeline
 
 This project uses GitHub Actions to run tests automatically.
 
-Pipeline features:
+## Pipeline features:
 
 Push to main → runs smoke tests
 
@@ -292,8 +274,10 @@ Headless browser execution
 
 CI test status badge
 
-📁 Project Structure
+## 📁 Project Structure
 <details> <summary><b>Click to expand</b></summary>
+
+
 ```bash
 qa-automation-cypress-framework/
 
@@ -345,14 +329,16 @@ or
 npx cypress run --spec "cypress/e2e/cart/cart.feature"
 🎥 Test Execution Example
 
-🚀 Future improvements planned:
+## 🚀 Future improvements planned:
 
 - Parallel test execution
 - API testing integration
 - Multi-environment configuration
 - Visual regression testing
 
-👩‍💻 Author
+---
+
+## 👩‍💻 Author
 
 Ivaneide Monteiro
 
@@ -387,9 +373,8 @@ This ensures that every change is validated automatically before being merged.
 
 ---
 
-Scalable testing frameworks
+### GitHub
 
-GitHub
 https://github.com/ivaneidepmn
 
 ⭐ If you like this project
