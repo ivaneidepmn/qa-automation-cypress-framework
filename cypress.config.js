@@ -1,5 +1,4 @@
 const { defineConfig } = require("cypress");
-const grepPlugin = require("@bahmutov/cy-grep/src/plugin");
 
 const createBundler = require("@bahmutov/cypress-esbuild-preprocessor");
 const {
@@ -10,6 +9,14 @@ const {
 } = require("@badeball/cypress-cucumber-preprocessor/esbuild");
 
 module.exports = defineConfig({
+  reporter: "mochawesome",
+  reporterOptions: {
+    reportDir: "cypress/reports",
+    overwrite: false,
+    html: true,
+    json: true,
+  },
+
   e2e: {
     baseUrl: "https://www.saucedemo.com",
     specPattern: "cypress/e2e/**/*.feature",
@@ -26,8 +33,6 @@ module.exports = defineConfig({
     responseTimeout: 15000,
 
     async setupNodeEvents(on, config) {
-      grepPlugin(config);
-
       await addCucumberPreprocessorPlugin(on, config);
 
       on(

@@ -4,22 +4,24 @@
   "description": "Framework de automação de testes E2E com Cypress e Cucumber (BDD)",
   "private": true,
   "scripts": {
-  "cy:open": "cypress open",
-  "cy:run": "cypress run --browser chrome",
-  "test": "cypress run --browser chrome",
-  "test:chrome": "cypress run --browser chrome",
-  "test:headed": "cypress run --headed --browser chrome",
-  "test:smoke": "cypress run --browser chrome --env TAGS='@smoke'",
-  "test:regression": "cypress run --browser chrome --env TAGS='@regression'",
-  "test:login": "cypress run --browser chrome --env TAGS='@login'",
-  "test:cart": "cypress run --browser chrome --env TAGS='@cart'"
+    "cy:open": "cypress open",
+    "cy:run": "cypress run --browser chrome",
+    "test": "cypress run --browser chrome",
+    "test:chrome": "cypress run --browser chrome",
+    "test:headed": "cypress run --headed --browser chrome",
+    "test:smoke": "cypress run --browser chrome --env TAGS='@smoke'",
+    "test:regression": "cypress run --browser chrome --env TAGS='@regression'",
+    "test:login": "cypress run --browser chrome --env TAGS='@login'",
+    "test:cart": "cypress run --browser chrome --env TAGS='@cart'"
   },
-  
   "devDependencies": {
     "@badeball/cypress-cucumber-preprocessor": "^20.0.0",
     "@bahmutov/cy-grep": "^2.1.0",
     "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",
     "cypress": "^13.6.0",
-    "esbuild": "^0.19.0"
+    "esbuild": "^0.19.0",
+    "mochawesome": "^7.1.4",
+    "mochawesome-merge": "^4.4.1",
+    "mochawesome-report-generator": "^6.3.2"
   }
 }
