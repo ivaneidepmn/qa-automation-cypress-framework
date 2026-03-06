@@ -75,8 +75,11 @@ Scenario: Login success
   Given que eu acesso a página de login
   When eu faço login com usuário "standard_user" e senha "secret_sauce"
   Then devo ver a página de produtos
+  ```
 
-## 🧩 Page Object Example
+---
+
+# 🧩 Page Object Example
 
 This framework uses the **Page Object Model (POM)** pattern to keep tests clean and maintainable.
 
@@ -102,6 +105,7 @@ class LoginPage {
 
 export default new LoginPage()
 
+```
 ---
 
 # 🛠 Tech Stack
@@ -117,7 +121,7 @@ export default new LoginPage()
 - Chrome Headless
 - Mochawesome Reporting
 
-
+```
 ---
 
 ## 📈 Test Strategy
@@ -312,8 +316,13 @@ qa-automation-cypress-framework/
 └─ README.md
 
 </details>
-▶️ Running Tests Locally
+
+```markdown
+## ▶️ Running Tests Locally
+
 Install dependencies
+
+```bash
 npm install
 Open Cypress UI
 npx cypress open
