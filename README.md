@@ -76,15 +76,13 @@ Scenario: Login success
   When eu faço login com usuário "standard_user" e senha "secret_sauce"
   Then devo ver a página de produtos
 
-
----
-
 ## 🧩 Page Object Example
 
 This framework uses the **Page Object Model (POM)** pattern to keep tests clean and maintainable.
 
 Example of a simplified Page Object:
 
+````markdown
 ```javascript
 class LoginPage {
 
